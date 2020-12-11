@@ -1,0 +1,18 @@
+version: "2"
+
+services:
+    skryba:
+        build: 
+            context: bluetooth
+            dockerfile: Dockerfile.template
+        network_mode: "host"
+        labels:
+            - "io.balena.features.sysfs=1"
+            - "io.balena.features.dbus=1"
+        environment:
+           UDEV: '1'
+           DBUS_SYSTEM_BUS_ADDRESS: "unix:path=/host/run/dbus/system_bus_socket"
+           INITSYSTEM: "on"
+        privileged: true
+        cap_add:
+           - NET_ADMIN
