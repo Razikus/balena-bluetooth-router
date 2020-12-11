@@ -9,7 +9,7 @@ COPY bluetoothclient.sh /bluetoothclient.sh
 COPY entrypoint.sh /entrypoint.sh
 COPY bridge.py /bridge.py
 
-ENV device hci0
+ENV DEVICE hci0
 
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 
