@@ -6,5 +6,5 @@ RUN install_packages python3
 COPY index.html /web/
 WORKDIR /web
 
-ENTRYPOINT ["python3", "-m", "http.server", "80"]
+ENTRYPOINT ["python3", "-m", "http.server", "--bind", "0.0.0.0", "80"]
 
