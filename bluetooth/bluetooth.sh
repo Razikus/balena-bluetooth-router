@@ -1,11 +1,11 @@
 #!/bin/bash
 
 sleep 1
-/bin/hciconfig hci0 lm master,accept/bin
+/bin/hciconfig $DEVICE lm master,accept/bin
 sleep 1
-/bin/hciconfig hci0 piscan
+/bin/hciconfig $DEVICE piscan
 sleep 1
-/bin/hciconfig hci0 sspmode 1
+/bin/hciconfig $DEVICE sspmode 1
 sleep 1
 sysctl -w net.ipv4.ip_forward=1
 sleep 1
