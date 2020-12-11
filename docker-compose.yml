@@ -1,7 +1,7 @@
 version: "2"
 
 services:
-    skryba:
+    router:
         build: 
             context: bluetooth
             dockerfile: Dockerfile.template
@@ -16,3 +16,8 @@ services:
         privileged: true
         cap_add:
            - NET_ADMIN
+    webexample:
+      build:
+        context: web
+        dockerfile: Dockerfile.template
+      network_mode: "host"

@@ -75,6 +75,8 @@ def main():
     if not manager.isBridgeExists():
         print("Adding bridge to NetworkManager")
         manager.addBridge()
+    else:
+        print("Bridge already exists")
 
 if __name__ == "__main__":
     main()
