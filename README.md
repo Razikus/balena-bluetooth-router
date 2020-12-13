@@ -11,3 +11,6 @@ https://www.youtube.com/watch?v=cZlYraRrIPU&ab_channel=Razikus
 
 
 Icon made by DinosoftLabs.
+
+
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/Razikus/balena-bluetooth-router)
