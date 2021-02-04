@@ -1,14 +1,16 @@
-version: "2"
-slug: "balena-bluetooth-router"
 name: "Bluetooth Router"
 type: "sw.application"
+description: "Bluetooth network router easily to integrate with balena and your devices. Contains example web server."
 assets:
-  - url: "https://github.com/Razikus/balena-bluetooth-router"
-    name: "repository"
-  - url: "https://raw.githubusercontent.com/Razikus/balena-bluetooth-router/master/logo.png"
-    name: "logo"
+  repository:
+    type: "blob.asset"
+    data:
+      url: "https://github.com/Razikus/balena-bluetooth-router"
+  logo:
+    type: "blob.asset"
+    data:
+      url: "https://raw.githubusercontent.com/Razikus/balena-bluetooth-router/master/logo.png"
 data:
-  description: "Bluetooth network router easily to integrate with balena and your devices. Contains example web server"
   applicationEnvironmentVariables:
     - DEVICE: 'hci0'
   defaultDeviceType: "raspberry-pi"
@@ -16,3 +18,4 @@ data:
     - "raspberry-pi"
     - "raspberry-pi2"
     - "raspberrypi3"
+    - "fincm3"
